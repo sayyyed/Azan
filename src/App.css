@@ -1,38 +1,109 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app{
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+}
+.card{
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px gray;
+  margin: 10px;
+}
+
+.card-header{
+background-color: antiquewhite;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+padding: 10px;
+border-bottom: 1px solid lightgray;
+text-align: center;
+}
+
+.card-content{
+  padding: 5px;
+}
+
+.city{
   text-align: center;
+  margin-bottom: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.date{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.timing{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.timing:nth-child(odd){
+  background-color: rgb(238, 238, 238);
+}
+
+.error-message{
+  position: absolute;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  color: red;
+}
+
+.search{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 5px black;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.search input{
+  height: 30px;
+  text-align: center;
+  border: 1px solid orange;
+  border-radius: 8px;
+  font-size: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search button{
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid orange;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search button:hover{
+  background-color: aliceblue;
+}
+
+@media screen and (max-width: 650px){
+  .app{
+    width: 95%;
+    margin-top: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search{
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 0px;
+  }
+
+  .card{
+    margin-top: 8px;
   }
 }
